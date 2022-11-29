@@ -1,5 +1,6 @@
 SRCS	= 	main.cpp \
-			ClapTrap.cpp
+			ClapTrap.cpp \
+			ScavTrap.cpp
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 CC		= c++
 NAME	= claptrap

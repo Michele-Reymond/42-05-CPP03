@@ -16,10 +16,6 @@ class ClapTrap {
         void        attack(const std::string &target);
         void        takeDamage(unsigned int amount);
         void        beRepaired(unsigned int amount);
-        std::string getName() const;
-        int         getHitPoints() const;
-        int         getEnergyPoint() const;
-        int         getAttack_Damage() const;
 
     protected:
         std::string         _name;
@@ -27,7 +23,5 @@ class ClapTrap {
         int                 _energyPoint;
         static const int    _attack_Damage = 20;
 };
-
-std::ostream &operator<<(std::ostream &out, ClapTrap const &instance);
 
 #endif

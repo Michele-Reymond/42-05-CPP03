@@ -4,14 +4,18 @@
 int main() {
     ClapTrap joe("Joe");
     ClapTrap joseph(joe);
-    ClapTrap jo = joe;
     ClapTrap rachel("Rachel");
+    ClapTrap rara = rachel;
 
-    rachel.attack("jo");
-    jo.takeDamage(3);
-    jo.takeDamage(5);
-    jo.takeDamage(3);
-    jo.takeDamage(1);
-    jo.beRepaired(10);
-    jo.attack("Rachel");
+    rachel.attack("joe");
+    joe.takeDamage(3);
+    joe.takeDamage(5);
+    joe.takeDamage(3);
+    joe.takeDamage(1);
+    joe.beRepaired(10);
+    joe.attack("Rachel");
+    rachel.takeDamage(5);
+    rara.takeDamage(0);
+    rachel.takeDamage(5);
+    return 0;
 }

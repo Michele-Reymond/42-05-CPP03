@@ -10,13 +10,11 @@ class ScavTrap : public ClapTrap {
         ScavTrap();
         ScavTrap(const std::string name);
         ScavTrap(const ScavTrap& instance);
-        ~ScavTrap();
+       ~ScavTrap();
 
         ScavTrap    &operator=(const ScavTrap &instance);
 
         void guardGate();
 };
-
-std::ostream &operator<<(std::ostream &out, ScavTrap const &instance);
 
 #endif
