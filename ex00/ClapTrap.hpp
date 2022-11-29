@@ -7,12 +7,27 @@ class ClapTrap {
 
     public:
         ClapTrap();
+        ClapTrap(const std::string name);
         ClapTrap(const ClapTrap& instance);
-        ClapTrap &operator=(const ClapTrap& instance);
         ~ClapTrap();
 
-    private:
+        ClapTrap    &operator=(const ClapTrap &instance);
 
+        void        attack(const std::string &target);
+        void        takeDamage(unsigned int amount);
+        void        beRepaired(unsigned int amount);
+        std::string getName() const;
+        int         getHitPoints() const;
+        int         getEnergyPoint() const;
+        int         getAttack_Damage() const;
+
+    private:
+        std::string         _name;
+        int                 _hitPoints;
+        int                 _energyPoint;
+        static const int    _attack_Damage = 0;
 };
+
+std::ostream &operator<<(std::ostream &out, ClapTrap const &instance);
 
 #endif
