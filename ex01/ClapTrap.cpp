@@ -3,17 +3,16 @@
 
 // ---------Constructor and destructor ------------
 
-ClapTrap::ClapTrap() : _hitPoints(100), _energyPoint(50), _name("Default") {
-    std::cout << "A new ClapTrap is created" << std::endl;
+ClapTrap::ClapTrap() : _hitPoints(10), _energyPoint(10), _attack_Damage(0), _name("Default") {
+    std::cout << "A new Default ClapTrap is created" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name) : _name(name), _hitPoints(100), _energyPoint(50) {
+ClapTrap::ClapTrap(const std::string name) : _name(name), _hitPoints(10), _energyPoint(10), _attack_Damage(0) {
     std::cout << "ClapTrap " << name << " is created" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& instance) {
     *this = instance;
-    std::cout << "ClapTrap " << this->_name << " is copied" << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
@@ -63,5 +62,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &instance) {
     this->_name = instance._name;
     this->_energyPoint = instance._energyPoint;
     this->_hitPoints = instance._hitPoints;
+    std::cout << this->_name << " is a new ClapTrap freshly copied" << std::endl;
     return *this;
 }
